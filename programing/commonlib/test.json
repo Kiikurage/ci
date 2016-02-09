@@ -1,0 +1,52 @@
+{
+	"familiy": {
+		"id": 12345678,
+		"name": "新神奈川家",
+		"address": "新神奈川県横浜市神奈川区六角橋3-27-1",
+		"members": [{
+			"id": 22345678,
+			"name": "keta",
+			"email": "keta@sample.com",
+			"tel": "12-3456-7890",
+			"type": 1,
+			"locations": [{
+				"id": 32345678,
+				"latitude": 31.1234,
+				"longitude": 123.45678,
+				"created": "2015-05-31 12:00",
+			}]
+		}]
+	}
+}
+
+//Family
+{
+	"id": 12345678,
+	"name": "新神奈川家",
+	"address": "新神奈川県横浜市神奈川区六角橋3-27-1",
+	"members": [
+		<% User.id %>
+	]
+}
+
+//User
+{
+	"id": 22345678,
+	"family_id": 12345678,
+	"name": "keta",
+	"email": "keta@sample.com",
+	"tel": "12-3456-7890",
+	"type": 1,
+	"locations": [
+		<% Location.id %>
+	]
+}
+
+//Location
+{
+	"id": 32345678,
+	"user_id": 22345678,
+	"latitude": 31.1234,
+	"longitude": 123.45678,
+	"created": "2015-05-31 12:00",
+}
